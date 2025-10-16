@@ -48,6 +48,12 @@ bot.on('message', async (msg) => {
     const chatId = msg.from.id
 
 
+    if(text === '/start'){
+
+        bot.sendMessage(chatId, 'Привет! Это бот который посепенно разрабатывается на базе бесплатного API.\nВ него добавляются новые функции и переделывается логика.\nВсе функции бота перечислены в боковом меню.')
+    }
+
+
     if(text === '/text_to_image') {
 
         bot.sendMessage(chatId, 'Отправь текст для генерации изображения')
