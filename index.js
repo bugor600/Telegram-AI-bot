@@ -62,7 +62,7 @@ bot.on('message', async (msg) => {
 
         await global.pool.query(`INSERT INTO Queue (author_telegram_id, text, type) VALUES (?, ?, ?)`, [chatId, text, 'text_to_image']);
 
-        bot.sendMessage(chatId, 'Задача по генерации изображения добавлена в очередь 🕔')
+        bot.sendMessage(chatId, '🕔 Задача по генерации изображения добавлена в очередь...')
 
         delete Get_text_to_image[chatId];
     }
